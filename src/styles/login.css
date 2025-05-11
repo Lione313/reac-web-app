@@ -1,0 +1,304 @@
+/* Fondo principal en blanco */
+.login-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+/* Caja de login con fondo negro translúcido y efecto de vidrio */
+.login-box {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.889); /* Fondo negro translúcido */
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra con un toque más fuerte */
+  max-width: 400px;
+  width: 100%;
+  backdrop-filter: blur(8px); /* Aplica el blur al fondo del box */
+  -webkit-backdrop-filter: blur(8px); /* Compatibilidad con Safari */
+}
+
+/* Título de login */
+.login-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+  color: white; /* Título en blanco */
+  animation: fadeIn 1s ease-in;
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Entrada de texto y botón */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco translúcido para inputs */
+  color: black; /* Texto en negro */
+}
+
+.input-password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  color: #888;
+}
+
+/* Botón de inicio de sesión */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Enlaces de registro y contraseña olvidada */
+.link-wrapper {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  margin-right: 12px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal */
+.login-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+/* Caja con efecto vidrio */
+.login-box {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Título */
+.login-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+  color: white;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilo input */
+.input-field {
+  width: 100%;
+  padding: 12px 40px 12px 12px; /* espacio para el icono */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Contenedor para input y ojo */
+.input-password-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+/* Ícono de ojo dentro del input */
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
+  z-index: 1;
+  background: none;
+  border: none;
+  padding: 0;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 🚫 Evita scroll causado por meteoros */
+  height: 100%;
+  width: 100%;
+}
+
+/* Fondo contenedor de meteoros */
+.meteoro-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Estilo base más fuerte */
+.meteoro {
+  position: absolute;
+  top: -100px;
+  width: 3px;
+  height: 120px;
+  opacity: 0.9;
+  transform: rotate(45deg);
+  animation: caida-meteoro linear infinite;
+  border-radius: 50px;
+  box-shadow: 0 0 15px white;
+}
+
+/* Animación más rápida y larga */
+@keyframes caida-meteoro {
+  0% {
+    transform: translate(0, 0) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-300px, 1200px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Personalización por meteoro con colores vibrantes y duraciones distintas */
+.meteoro:nth-child(1) {
+  left: 5%;
+  animation-duration: 2.5s;
+  animation-delay: 0s;
+  background: linear-gradient(to bottom, #00ffff, transparent);
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.meteoro:nth-child(2) {
+  left: 15%;
+  animation-duration: 2.3s;
+  animation-delay: 0.5s;
+  background: linear-gradient(to bottom, #ff66ff, transparent);
+  box-shadow: 0 0 15px #ff66ff;
+}
+
+.meteoro:nth-child(3) {
+  left: 25%;
+  animation-duration: 2.8s;
+  animation-delay: 0.2s;
+  background: linear-gradient(to bottom, #ffffff, transparent);
+  box-shadow: 0 0 15px #ffffff;
+}
+
+.meteoro:nth-child(4) {
+  left: 35%;
+  animation-duration: 2.6s;
+  animation-delay: 0.8s;
+  background: linear-gradient(to bottom, #00ffcc, transparent);
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.meteoro:nth-child(5) {
+  left: 45%;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  background: linear-gradient(to bottom, #ffcc00, transparent);
+  box-shadow: 0 0 15px #ffcc00;
+}
+
+.meteoro:nth-child(6) {
+  left: 55%;
+  animation-duration: 2.7s;
+  animation-delay: 0.6s;
+  background: linear-gradient(to bottom, #66ff66, transparent);
+  box-shadow: 0 0 15px #66ff66;
+}
+
+.meteoro:nth-child(7) {
+  left: 65%;
+  animation-duration: 2.2s;
+  animation-delay: 0.3s;
+  background: linear-gradient(to bottom, #ff4444, transparent);
+  box-shadow: 0 0 15px #ff4444;
+}
+
+.meteoro:nth-child(8) {
+  left: 75%;
+  animation-duration: 2.9s;
+  animation-delay: 1.3s;
+  background: linear-gradient(to bottom, #66ccff, transparent);
+  box-shadow: 0 0 15px #66ccff;
+}
+
+.meteoro:nth-child(9) {
+  left: 85%;
+  animation-duration: 3.1s;
+  animation-delay: 0.7s;
+  background: linear-gradient(to bottom, #ffffff, transparent);
+  box-shadow: 0 0 15px #ffffff;
+}
+
+.meteoro:nth-child(10) {
+  left: 95%;
+  animation-duration: 2.4s;
+  animation-delay: 1.5s;
+  background: linear-gradient(to bottom, #ff00cc, transparent);
+  box-shadow: 0 0 15px #ff00cc;
+}

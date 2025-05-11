@@ -1,0 +1,27 @@
+/* Aseguramos que el cuerpo ocupe toda la altura disponible */
+html, body {
+  height: 100%;  /* Hace que el body ocupe toda la altura de la pantalla */
+  margin: 0; /* Elimina el margen predeterminado */
+  display: flex; /* Usamos flexbox */
+  flex-direction: column; /* Alineamos los elementos en una columna */
+}
+
+/* Contenedor principal de contenido */
+.main-content {
+  flex-grow: 1; /* Hace que el contenido ocupe todo el espacio disponible */
+}
+
+/* Estilos del footer */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  color: #333;
+  border-top: 1px solid #ccc;
+  margin-top: auto;  /* Esto empuja el footer al final */
+}
+
+.footer-text {
+  font-size: 0.875rem; /* 14px */
+  color: #666;
+}

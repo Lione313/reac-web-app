@@ -1,0 +1,135 @@
+/* Estilos de la barra de navegación */
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo de la empresa */
+.navbar-logo .navbar-item {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Enlaces del menú */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out; /* Transición para abrir/cerrar el menú */
+}
+
+.navbar-links.active {
+  transform: translateX(0); /* Si está activo, se muestra el menú */
+}
+
+.navbar-item {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navbar-item:hover {
+  text-decoration: underline;
+}
+
+/* Botón de cierre de sesión */
+.navbar-button {
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.navbar-button:hover {
+  background-color: #ff3300;
+}
+
+/* Estilos para el ícono de hamburguesa (solo en pantallas pequeñas) */
+.navbar-hamburger {
+  display: none; /* No mostrar en pantallas grandes */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* En pantallas pequeñas, ocultar los enlaces y mostrar el ícono del menú */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    transform: translateX(-100%); /* Ocultar el menú */
+  }
+
+  .navbar-hamburger {
+    display: block; /* Mostrar el ícono de hamburguesa */
+  }
+
+  .navbar-item {
+    margin: 1rem 0;
+  }
+}
+/* Estilos para el modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Asegura que el modal esté por encima de otros elementos */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content button {
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+
+.modal-content button:hover {
+  background-color: #ff3300;
+}
+
+.modal-content button:last-child {
+  background-color: #ccc; /* Color para el botón de cancelar */
+}
+
+.modal-content button:last-child:hover {
+  background-color: #bbb; /* Color para el botón de cancelar cuando se pasa el mouse */
+}
